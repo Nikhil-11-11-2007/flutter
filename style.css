@@ -1,0 +1,101 @@
+@font-face {
+  font-family: "fnt1";
+  src: url(./font1);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+html {
+  font-family: "fnt1";
+  font-size: clamp(14px, 1vw, 18px);
+}
+
+body {
+  background-color: #fff;
+}
+
+nav {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+nav .top {
+  width: 100%;
+  padding: 1rem;
+  background-color: royalblue;
+  color: #fff;
+}
+nav .bottom {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  padding: 1.8rem 2.1rem;
+}
+nav .bottom .box {
+  width: 40%;
+}
+nav .bottom .box img {
+  width: 100%;
+}
+nav .bottom .icon {
+  font-size: 1.3rem;
+}
+
+main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  text-align: center;
+  margin-top: 7rem;
+}
+main section.view1 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+main section.view1 .top {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+  padding: 1rem;
+  background-color: #f3fcff;
+}
+main section.view1 .top .top-up {
+  width: 100%;
+  padding-top: 4rem;
+}
+main section.view1 .top .top-up img {
+  width: 100%;
+}
+main section.view1 .top .top-bottom {
+  width: 100%;
+}
+main section.view1 .top .top-bottom h1 {
+  font-size: 3.2rem;
+  line-height: 1.1;
+}
+main section.view1 .bottom {
+  width: 100%;
+  background-color: #fff;
+  padding: 2rem;
+}
+main section.view1 .bottom p {
+  font-size: 2.5rem;
+}/*# sourceMappingURL=style.css.map */
