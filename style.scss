@@ -36,41 +36,55 @@ body{
     gap: $gap;
 }
 
+section{
+    max-width: 1600px;
+}
+
 nav{
+    max-width: 1600px;
+}
+
+header{
     width: 100%;
-    @include flex-column(0rem);
+    @include flex-column(1rem);
+    width: 100%;
+    align-items: center;
     position: fixed;
     top: 0;
     left: 0;
-
-    .nav-part2{
-        display: none;
-    }
-
-    .top{
+    z-index: 5;
+    nav{
         width: 100%;
-        padding: 1rem;
-        background-color: royalblue;
-        color: #fff;
-    }
-
-    .bottom{
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        background-color: #fff;
-        padding: 1.8rem 2.1rem;
-       
-        .box{
-            width: 40%;
-            img{
-                width: 100%;
-            }
+        @include flex-column(0rem);
+        .nav-part2{
+            display: none;
         }
 
-        .icon{
-            font-size: 1.3rem;
+        .top{
+            width: 100%;
+            padding: 1rem;
+            background-color: royalblue;
+            color: #fff;
+        }
+
+        .bottom{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #fff;
+            padding: 1.8rem 2rem;
+       
+            .box{
+                width: 40%;
+                img{
+                    width: 100%;
+                }
+            }
+
+            .icon{
+                font-size: 1.3rem;
+            }
         }
     }
 }
@@ -78,10 +92,9 @@ nav{
 main{
     width: 100%;
     @include flex-column(1rem);
-    text-align: center;
+    align-items: center;
     margin-top: 7rem;
     section.view1{
-        min-height: 100vh;
         width: 100%;
         @include flex-column(1rem);
         background: linear-gradient(#f3fcff,#fcdfeae8);
@@ -103,6 +116,7 @@ main{
             .top-bottom{
                 width: 100%;
                 h1{
+                    text-align: center;
                     font-size: 3.2rem;
                     line-height: 1.1;
                 }
@@ -113,70 +127,174 @@ main{
             padding: 6rem 2rem;
             width: 100%;
             p{
+                text-align: center;
                 font-size: 2.3rem;
                 width: 97%;
             }
         }
         
     }
-}
 
-@media (min-width:900px) {
-    nav{
-
-        .nav-part2{
-            display: flex;
-            align-items: center;
-            gap: 3.5rem;
-
-            a{
-                font-size: .93rem;
-                font-weight: 700;
-                opacity: .9;
-                font-family: "fnt2";
-                text-decoration: none;
-                color: #111;
-                text-transform: capitalize;
-            }
-
-            a:nth-child(3){
-                color: royalblue;
-            }
-
-            button{
-                padding: .7rem 2.3rem;
-                font-size: 1rem;
-                text-transform: capitalize;
-                border: none;
-                background-color: royalblue;
-                color: #fff;
-                border-radius: 2rem;
-            }
-        }
-
-        .top{
-           text-align: center;
-           font-weight: 500;
-           font-size: 1rem;
-           border-bottom: 2px solid #000;
-           background: linear-gradient(to right,#0f76fb,#8140f3);
-        }
-
-      .bottom{
+    section.view2{
         width: 100%;
-        padding: 1.8rem 3rem;
-       
-        .box{
-            width: 9%;
+        @include flex-column(0rem);
+        padding: 1rem;
+
+        .container{
+            width: 100%;
+            @include flex-column(1.5rem);
+            padding: 3.3rem 1rem; 
+            .card{
+                width: 100%;
+                @include flex-column(2rem);
+                border-top: .3rem solid #e8eaed;
+                padding: 2rem 0rem;
+
+                h3{
+                    font-size: 1.6em;
+                    text-transform: capitalize;
+                }
+
+                p{
+                    font-size: 1.3rem;
+                    width: 83%;
+                    opacity: .7;
+                    padding-bottom: 2rem;
+                }
+
+                .image{
+                    width: 85%;
+                    img{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    section.view3{
+        width: 100%;
+        @include flex-column(1rem);
+        padding: 1rem;
+        .top{
+            width: 100%;
             img{
                 width: 100%;
             }
         }
 
-        .icon{
-            display: none;
+        .bottom{
+            width: 100%;
+            padding: 1rem;
+            @include flex-column(1rem);
+            padding-bottom: 5rem;
+
+            .text{
+                width: 100%;
+                @include flex-column(1rem);
+
+                h4{
+                    text-transform: capitalize;
+                    font-size: 1.5rem;
+                    opacity: .8;
+                }
+
+                h1{
+                    font-size: 3.1rem;
+                }
+                
+                p{
+                    font-size: 1.25rem;
+                    width: 90%;
+                    opacity: .75;
+                    line-height: 1.5;
+                    margin-bottom: 1rem;
+                }
+            }
+
+            .btns{
+                width: 100%;
+                @include flex-column(2rem);
+
+                button{
+                    width: fit-content;
+                    font-weight: 700;
+                    padding: .7rem 2rem;
+                    border: 1px solid royalblue;
+                    color: royalblue;
+                    border-radius: 3rem;
+                }
+
+                a{
+                    text-decoration: none;
+                    font-weight: 700;
+                    color: #111;
+                    margin-left: 2rem;
+                }
+            }
         }
-     }
+    }
+}
+
+@media (min-width:900px) {
+    header{
+
+        nav{
+
+            .nav-part2{
+                display: flex;
+                align-items: center;
+                gap: 3.5rem;
+
+                a{
+                    font-size: .93rem;
+                    font-weight: 700;
+                    opacity: .9;
+                    font-family: "fnt2";
+                    text-decoration: none;
+                    color: #111;
+                    text-transform: capitalize;
+                }
+
+                a:nth-child(3){
+                    color: royalblue;
+                }
+
+                button{
+                    padding: .7rem 2.3rem;
+                    font-size: 1rem;
+                    text-transform: capitalize;
+                    border: none;
+                    background-color: royalblue;
+                    color: #fff;
+                    border-radius: 2rem;
+                }
+            }
+
+            .top{
+                text-align: center;
+                font-weight: 500;
+                font-size: 1rem;
+                border-bottom: 2px solid #000;
+                background: linear-gradient(to right,#0f76fb,#8140f3);
+            }
+
+            .bottom{
+                 width: 100%;
+                padding: 1.8rem 3rem;
+       
+                .box{
+                    width: 9%;
+                    img{
+                        width: 100%;
+                    }
+                }
+
+                .icon{
+                    display: none;
+                }
+            }
+        }
     }
 
     main{
@@ -205,12 +323,60 @@ main{
             }
             
             .bottom{
-                text-align: center;
+                @include flex-column(0rem);
+                align-items: center;
                 padding: 5rem;
-                padding-left: 20rem;
                 width: 100%;
                 p{
-                    width: 80%;
+                    text-align: center;
+                    width: 67%;
+                }
+            }
+        }
+
+        section.view2{
+            flex-direction: row;
+
+            .container{
+                flex-direction: row;
+                padding: 3rem 10rem;
+
+                .card{
+                    padding: 1.9rem 0rem;
+                    h3{
+                        font-size: 1.84rem;
+                    }
+                }
+            }
+        }
+
+        section.view3{
+            @include flex-column(5rem);
+            flex-direction: row-reverse;
+            padding: 0rem 8rem;
+
+            .top{
+                width: 45%;
+                img{
+                    width: 85%;
+                }
+            }
+
+            .bottom{
+                width: 45%;
+                padding-top: 8rem;
+
+                .text{
+                    width: 100%;
+
+                    h1{
+                        font-size: 4rem;
+                    }
+                }
+
+                .btns{
+                    flex-direction: row;
+                    align-items: center;
                 }
             }
         }
