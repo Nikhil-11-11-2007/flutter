@@ -40,14 +40,10 @@ section{
     max-width: 1600px;
 }
 
-nav{
-    max-width: 1600px;
-}
 
 header{
     width: 100%;
     @include flex-column(1rem);
-    width: 100%;
     align-items: center;
     position: fixed;
     top: 0;
@@ -98,6 +94,7 @@ main{
         width: 100%;
         @include flex-column(1rem);
         background: linear-gradient(#f3fcff,#fcdfeae8);
+        padding: 4rem 0rem;
 
         .top{
             width: 100%;
@@ -107,7 +104,7 @@ main{
 
             .top-up{
                 width: 100%;
-                padding-top: 4rem;
+                // padding-top: 4rem;
                 img{
                     width: 100%;
                 }
@@ -234,6 +231,184 @@ main{
             }
         }
     }
+
+    section.view4{
+        width: 100%;
+        @include flex-column(2rem);
+        padding: 3rem 1rem;
+        background: linear-gradient(#e2e7ea,#fcfce2);
+        .top{
+            width: 100%;
+
+            img{
+                width: 100%;
+            }
+        }
+
+        .bottom{
+            width: 100%;
+            @include flex-column(2rem);
+            padding: 1rem;
+
+            h4{
+                font-size: 1.3rem;
+                opacity: .8;
+            }
+
+            h1{
+                font-size: 3.3rem;
+                line-height: 1;
+            }
+
+            p{
+                font-size: 1.3rem;
+                opacity: .8;
+                width: 95%;
+                line-height: 1.4;
+            }
+
+            button{
+                width: fit-content;
+                padding: .9rem 2.4rem;
+                font-size: 1rem;
+                font-weight: 700;
+                border: none;
+                border-radius: 3rem;
+                background-color: #0468d7;
+                color: #fff;
+            }
+        }
+    }
+
+    section.view5{
+        width: 100%;
+        @include flex-column(2rem);
+        padding: 3rem 1rem;
+        .top{
+            width: 100%;
+
+            img{
+                width: 100%;
+            }
+        }
+
+        .bottom{
+            width: 100%;
+            @include flex-column(2rem);
+            padding: 1rem;
+
+            h4{
+                font-size: 1.3rem;
+                opacity: .8;
+            }
+
+            h1{
+                font-size: 3.3rem;
+                line-height: 1;
+            }
+
+            p{
+                font-size: 1.3rem;
+                opacity: .8;
+                width: 95%;
+                line-height: 1.4;
+            }
+
+            button{
+                width: fit-content;
+                padding: .9rem 2.4rem;
+                font-size: 1rem;
+                font-weight: 700;
+                border: 1px solid #0468d7;
+                border-radius: 3rem;
+                background-color: transparent;
+                color: #0468d7;
+            }
+        }
+    }
+
+    section.view6{
+        width: 100%;
+        @include flex-column(2rem);
+        padding: 3rem 1rem;
+        background: linear-gradient(#e2e7ea,#fcfce2);
+        .top{
+            width: 100%;
+
+            img{
+                width: 100%;
+            }
+        }
+
+        .bottom{
+            width: 100%;
+            @include flex-column(2rem);
+            padding: 1rem;
+
+            h4{
+                font-size: 1.3rem;
+                opacity: .8;
+            }
+
+            h1{
+                font-size: 3.3rem;
+                line-height: 1;
+            }
+
+            p{
+                font-size: 1.3rem;
+                opacity: .8;
+                width: 95%;
+                line-height: 1.4;
+            }
+
+            button{
+                width: fit-content;
+                padding: .9rem 2.4rem;
+                font-size: 1rem;
+                font-weight: 700;
+                border: none;
+                border-radius: 3rem;
+                background-color: #0468d7;
+                color: #fff;
+            }
+        }
+    }
+    
+    // section.view7{
+    //     width: 100%;
+    //     @include flex-column(0rem);
+    //     padding: 2rem;
+    //     .container{
+    //         width: 100%;
+    //         @include flex-column(2rem);
+    //         padding: 9rem 3rem;
+    //         background-image: url(https://storage.googleapis.com/cms-storage-bucket/get-started-background.72521e62275b24d3c37d.png);
+    //         background-size: cover;
+    //         border-radius: 2rem;
+    //         background-position: -10rem 0rem;
+    //         background-color: #042449;
+
+    //         .top{
+    //             width: 100%;
+    //             @include flex-column(1rem);
+    //             color: #fff;
+
+    //             h1{
+    //                 font-size: 3.5rem
+    //             }
+
+    //             p{
+    //                 font-size: 1.25rem;
+    //             }
+    //         }
+
+    //         .bottom{
+    //             width: 100%;
+    //             @include flex-column(1rem);
+    //         }
+    //     }
+    // }
 }
 
 @media (min-width:900px) {
@@ -300,22 +475,22 @@ main{
     main{
         width: 100%;
         section.view1{
+            padding: 10rem 12rem;
             .top{
                 flex-direction: row-reverse;
                 .top-up{
-                    width: 45%;
-                    padding-top: 3.6rem;
+                    width: 57%;
+                    margin-top: -5rem;
                     img{
                         width:100%;
                     }
                 }
 
                 .top-bottom{
-                    width: 50%;
-                    padding: 12rem;
-                    text-align: left;
+                    width: 43%;
                     h1{
-                        font-size: 4rem;
+                        text-align: left;
+                        font-size: 4.5rem;
                         width: 100%;
                         line-height: 1.1;
                     }
@@ -325,11 +500,11 @@ main{
             .bottom{
                 @include flex-column(0rem);
                 align-items: center;
-                padding: 5rem;
+                padding: 0rem 1rem;
                 width: 100%;
                 p{
                     text-align: center;
-                    width: 67%;
+                    width: 83%;
                 }
             }
         }
@@ -377,6 +552,84 @@ main{
                 .btns{
                     flex-direction: row;
                     align-items: center;
+                }
+            }
+        }
+        section.view4{
+            flex-direction: row;
+            padding: 2.5rem 9.5rem;
+            gap: 1rem;
+            background: linear-gradient(to right, #fcfce2,#e2e7ea);
+
+            .top{
+                width: 50%;
+                padding-top: 2rem;
+                img{
+                    width: 80%;
+                }
+            }
+
+            .bottom{
+                width: 50%;
+
+                h1{
+                    font-size: 4rem;
+                }
+                
+                p{
+                    width: 81%;
+                }
+            }
+        }
+        section.view5{
+            flex-direction: row-reverse;
+            padding: 2rem 9.5rem;
+            gap: 7rem;
+
+            .top{
+                width: 50%;
+                img{
+                    width: 100%;
+                }
+            }
+
+            .bottom{
+                width: 50%;
+                margin: 6rem 4rem;
+                h1{
+                    font-size: 4rem;
+                    width: 90%;
+                }
+                
+                p{
+                    width: 100%;
+                }
+            }
+        }
+
+        section.view6{
+            flex-direction: row;
+            padding: 2.5rem 9.5rem;
+            gap: 1rem;
+            background: linear-gradient(to right, #fcfce2,#e2e7ea);
+
+            .top{
+                width: 50%;
+                padding-top: 2rem;
+                img{
+                    width: 80%;
+                }
+            }
+
+            .bottom{
+                width: 50%;
+
+                h1{
+                    font-size: 4rem;
+                }
+                
+                p{
+                    width: 81%;
                 }
             }
         }
