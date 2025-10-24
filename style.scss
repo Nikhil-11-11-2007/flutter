@@ -28,8 +28,6 @@ body{
     background-color: #fff;
 }
 
-// https://flutter.dev/ecosystem
-
 @mixin flex-column($gap:0rem){
     display: flex;
     flex-direction: column;
@@ -39,7 +37,6 @@ body{
 section{
     max-width: 1600px;
 }
-
 
 header{
     width: 100%;
@@ -375,43 +372,147 @@ main{
         }
     }
     
-    // section.view7{
-    //     width: 100%;
-    //     @include flex-column(0rem);
-    //     padding: 2rem;
-    //     .container{
-    //         width: 100%;
-    //         @include flex-column(2rem);
-    //         padding: 9rem 3rem;
-    //         background-image: url(https://storage.googleapis.com/cms-storage-bucket/get-started-background.72521e62275b24d3c37d.png);
-    //         background-size: cover;
-    //         border-radius: 2rem;
-    //         background-position: -10rem 0rem;
-    //         background-color: #042449;
+    section.view7{
+        width: 100%;
+        @include flex-column(0rem);
+        padding: 4rem 2rem;
+        .container{
+            width: 100%;
+            @include flex-column(2rem);
+            padding: 9rem 3rem;
+            background-image: url(https://storage.googleapis.com/cms-storage-bucket/get-started-background.72521e62275b24d3c37d.png);
+            background-size: cover;
+            border-radius: 3rem;
+            background-position: -8rem 0rem;
+            background-color: #042449;
 
-    //         .top{
-    //             width: 100%;
-    //             @include flex-column(1rem);
-    //             color: #fff;
+            .top{
+                width: 100%;
+                @include flex-column(1rem);
+                color: #fff;
 
-    //             h1{
-    //                 font-size: 3.5rem
-    //             }
+                h1{
+                    font-size: 3.5rem
+                }
 
-    //             p{
-    //                 font-size: 1.25rem;
-    //             }
-    //         }
+                p{
+                    font-size: 1.25rem;
+                }
+            }
 
-    //         .bottom{
-    //             width: 100%;
-    //             @include flex-column(1rem);
-    //         }
-    //     }
-    // }
+            .bottom{
+                width: 100%;
+                @include flex-column(1rem);
+
+                button{
+                    width: fit-content;
+                    padding: .8rem 2.5rem;
+                    font-weight: 700;
+                    border: none;
+                    color: #2c68d7;
+                    border-radius: 3rem;
+                }
+
+                a{
+                    text-decoration: none;
+                    color: #fff;
+                    font-weight: 700;
+                    margin-left: 2rem;
+                }
+            }
+        }
+    }
+
+    section.view8{
+        width: 100%;
+        @include flex-column(1rem);
+        padding: 2rem;
+        background-color: #f8f9fa;
+        .top{
+            width: 100%;
+            @include flex-column(3rem);
+            padding: 2rem;
+
+            .image{
+                width: 50%;
+                img{
+                    width: 100%;
+                }
+            }
+
+            .content{
+                width: 100%;
+                @include flex-column(3rem);
+                padding: 1rem;
+
+                .detail{
+                    width: 100%;
+                    @include flex-column(1rem);
+
+                    h3{
+                        font-size: 1.2rem;
+                        text-transform: capitalize;
+                    }
+
+                    a{
+                        text-decoration: none;
+                        text-transform: capitalize;
+                        opacity: .8;
+                        color: #111;
+                        font-size: 1.1rem;
+                    }
+                }
+            }
+            
+        }
+
+        .bottom{
+            width: 100%;
+            @include flex-column(1rem);
+            padding: 2rem;
+
+            .icons{
+                width: 100%;
+                display: flex;
+                align-items: center;
+                gap: 1.2rem;
+                padding-bottom: 2rem;
+                border-bottom: 1px solid #d3d1d1;
+                
+                i{
+                    font-size: 1.5rem;
+                    opacity: .7;
+                }
+            }
+
+            .bottom-down{
+                width: 100%;
+                @include flex-column(1rem);
+                
+                p{
+                    text-align: center;
+                    line-height: 1.3;
+                    opacity: .8;
+                }
+
+                .last{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 1rem;
+
+                    h4{
+                        font-weight: 400;
+                        opacity: .8;
+                        text-transform: capitalize;
+                    }
+                }
+            }
+        }
+    }
 }
 
-@media (min-width:900px) {
+@media (min-width:1000px) {
     header{
 
         nav{
@@ -606,7 +707,6 @@ main{
                 }
             }
         }
-
         section.view6{
             flex-direction: row;
             padding: 2.5rem 9.5rem;
@@ -630,6 +730,75 @@ main{
                 
                 p{
                     width: 81%;
+                }
+            }
+        }
+        section.view7{
+            padding: 4.5rem 11rem;
+            .container{
+                padding: 4rem 4rem;
+                background-size: 90rem;
+                background-position: 0rem 20rem;
+
+                .bottom{
+                    flex-direction: row;
+                    gap: 0rem;
+                    align-items: center;
+                }
+            }
+        }
+        section.view8{
+            padding: 3rem 2rem;
+            gap: 2rem;
+            .top{
+                flex-direction: row;
+                gap: 32rem;
+
+                .image{
+                    width: 17%;
+                    img{
+                        width: 100%;
+                    }
+                }
+
+                .content{
+                    flex-direction: row;
+                    gap: 2rem;
+
+                    .detail{
+                        h3{
+                            font-size: 1rem;
+                        }
+
+                        a{
+                            font-size: 1rem;
+                        }
+                    }
+                }
+            }
+
+            .bottom{
+                gap: 0.5rem;
+                padding: 1.5rem;
+
+                .icons{
+                    gap: 1rem;
+
+                    i{
+                        font-size: 1.3rem;
+                    }
+                }
+
+                .bottom-down{
+                    flex-direction: row;
+                    padding: 1.5rem;
+                    justify-content: space-between;
+
+                    p{
+                        width: 70%;
+                        text-align: left;
+                        font-size: .9rem;
+                    }
                 }
             }
         }
