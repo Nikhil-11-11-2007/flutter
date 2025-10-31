@@ -53,7 +53,7 @@ header nav .nav-part2 {
 header nav .top {
   width: 100%;
   padding: 1rem;
-  background-color: royalblue;
+  background: linear-gradient(to right, #0f76fb, #8140f3);
   color: #fff;
 }
 header nav .bottom {
